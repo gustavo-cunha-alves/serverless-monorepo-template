@@ -1,0 +1,29 @@
+{
+  "name": "serverless-monorepo-template",
+  "version": "1.0.0",
+  "description": "A simple and powerful template for building serverless applications using the Serverless Framework and TypeScript.",
+  "main": "index.js",
+  "private": true,
+  "workspaces": {
+    "packages": ["packages/*"]
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gustavo-cunha-alves/serverless-monorepo-template.git"
+  },
+  "author": "Gustavo Alves",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gustavo-cunha-alves/serverless-monorepo-template/issues"
+  },
+  "homepage": "https://github.com/gustavo-cunha-alves/serverless-monorepo-template#readme",
+  "devDependencies": {
+    "@types/node": "^20.4.1",
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  }
+}
