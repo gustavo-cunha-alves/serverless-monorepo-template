@@ -10,7 +10,8 @@
     ]
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "create-package": "npm init --scope @serverless-monorepo-template --workspace ./packages/$npm_config_package -y"
   },
   "repository": {
     "type": "git",
