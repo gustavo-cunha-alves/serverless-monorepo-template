@@ -1,0 +1,33 @@
+service: simple-service
+frameworkVersion: '3'
+
+provider:
+  # General Settings
+  name: aws
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'us-east-1'}
+  profile: ${opt:profile, 'default'}
+  tags:
+    apiVersion: '1.0'
+  # General Functions Settings
+  runtime: nodejs18.x
+  memorySize: 512
+  timeout: 10
+  environment:
+    ENV_VARIABLE_EXAMPLE: example
+  logRetentionInDays: 14
+
+package:
+  excludeDevDependencies: true
+
+functions:
+  hello:
+    handler: src/handler.main
+    events:
+      - httpApi:
+          method: GET
+          path: /hello
+
+plugins:
+  - serverless-esbuild
+  - serverless-offline
