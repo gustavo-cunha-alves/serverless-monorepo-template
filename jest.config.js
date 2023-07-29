@@ -3,5 +3,5 @@ module.exports = {
   preset: 'ts-jest',
   projects: ['<rootDir>/packages/**/jest.config.js'],
   testEnvironment: 'node',
-  testMatch: ['*.spec.ts']
+  testMatch: ['*.spec.ts', '*.test.ts']
 }
